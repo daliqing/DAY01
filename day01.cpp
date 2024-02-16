@@ -1,4 +1,4 @@
-//edit:编辑
+//edit:编辑 hub：中心、枢纽
 #include<iostream>
 using namespace std;
 //继承语法：class 子类(派生类) : 继承方式 父类(基类)
