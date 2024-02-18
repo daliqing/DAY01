@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+#include<string>
+struct student {
+	string name;
+	int age;
+	int score;
+};
+
+int main() {
+struct student  stuArray[3] = {
+		{"张三",18,100},
+		{"赵四",20,99},
+		{"王五",30,89}
+	};
+//求数组元素个数一定要用size(arr)!!!
+for (int i = 0; i < size(stuArray); i++) {
+	cout << "姓名：" << stuArray[i].name << " 年龄：" << stuArray[i].age << " 分数：" << stuArray[i].score << endl;
+}
+	system("pause");
+	return 0;
+}
