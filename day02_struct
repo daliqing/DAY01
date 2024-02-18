@@ -1,0 +1,31 @@
+#include<iostream>
+#include<string>
+using namespace std;
+struct Student {
+	string name;
+	int age;
+	int score;
+
+}s3;//在定义结构体时顺便创建的结构体变量s3
+int main() {
+	struct Student s1;//struct可以省略
+	s1.name = "张三";//结构体利用操作符"."访问成员变量
+	s1.age = 18;
+	s1.score = 98;
+	cout << "姓名：" << s1.name << " 年龄：" << s1.age << " 分数：" << s1.score << endl;
+	
+	struct Student s2 = { "李四",19,99 };
+	cout << "姓名：" << s2.name << " 年龄：" << s2.age << " 分数：" << s2.score << endl;
+	s3 = { "王五",20,100 };
+	cout << "姓名：" << s3.name << " 年龄：" << s3.age << " 分数：" << s3.score << endl;
+
+	//利用指针解引用遍历数组元素
+	int arr[] = { 1,2,6,4,5,6,7 };
+	int* p = arr;
+	for (int i = 1; i <= 7; i++) {
+		cout << "数组第" << i << "个元素为" << *p << endl;
+		p++;
+	}
+	system("pause");
+	return 0;
+}
