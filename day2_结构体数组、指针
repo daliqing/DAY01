@@ -8,6 +8,7 @@ struct student {
 };
 
 int main() {
+//1.结构体数组，利用for循环遍历
 struct student  stuArray[3] = {
 		{"张三",18,100},
 		{"赵四",20,99},
@@ -17,6 +18,10 @@ struct student  stuArray[3] = {
 for (int i = 0; i < size(stuArray); i++) {
 	cout << "姓名：" << stuArray[i].name << " 年龄：" << stuArray[i].age << " 分数：" << stuArray[i].score << endl;
 }
-	system("pause");
+//2.结构体指针
+struct student s = { "张三",18,100 };
+struct student* p = &s;
+cout << "姓名：" << p->name << " 年龄：" << p->age << " 分数：" << p->score << endl;
+system("pause");
 	return 0;
 }
